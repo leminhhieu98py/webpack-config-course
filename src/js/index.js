@@ -14,7 +14,7 @@ document.addEventListener('change', function (event) {
     newTodoEventHandler(event);
   }
 });
-
+// hello3
 document.addEventListener('click', function (event) {
   if (event.target.classList.contains('delete')) {
     removeTodoEventHandler(event);

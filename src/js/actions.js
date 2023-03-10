@@ -1,4 +1,5 @@
 import todoItems from '../data.json';
+import styles from '../css/style.module.css';
 
 let data = todoItems;
 
@@ -35,6 +36,7 @@ function renderTodos(todos) {
                 </span>
                 <label>${todo.text}</label>
                 <span class="delete"></span>
+                <span class="${styles.red}"> module</span>
             </li>
         `;
   });
