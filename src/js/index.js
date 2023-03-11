@@ -5,7 +5,7 @@ import {
   newTodoEventHandler
 } from './actions';
 
-import '../css/index.css';
+import '../css/index.less';
 
 window.addEventListener('load', onLoadEventHandler);
 

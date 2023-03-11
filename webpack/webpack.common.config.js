@@ -21,6 +21,10 @@ const config = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'] // style-loader making into 1 one --> long time to load
       },
       {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+      },
+      {
         test: /\.html$/,
         use: 'html-loader'
       }
