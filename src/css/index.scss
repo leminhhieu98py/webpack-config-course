@@ -1,4 +1,4 @@
-@import './mixin.less';
+@import 'variables';
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font: 18px 'Helvetica Neue', Helvetica, Arial;
-  background-color: @background-color;
+  background-color: $background-color;
   color: #4d4d4d;
   font-weight: 300;
 }

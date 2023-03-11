@@ -1,5 +1,5 @@
 import todoItems from '../data.json';
-import styles from '../css/style.module.less';
+import styles from '../css/style.module.scss';
 
 let data = todoItems;
 

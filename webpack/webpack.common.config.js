@@ -22,7 +22,21 @@ const config = {
       },
       {
         test: /\.less$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader', // postcss-loader + autoprefixer can make sure CSS more compatible with old browser versions
+          'less-loader'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.html$/,
