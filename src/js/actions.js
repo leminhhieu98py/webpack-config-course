@@ -1,6 +1,7 @@
 import todoItems from '../data.json';
-import'../css/style.scss';
-import CheckMark from '../../images/checkmark.svg'
+import '../css/style.scss';
+import CheckMark from '../../images/checkmark.svg';
+import { trim } from './utils.ts';
 
 let data = todoItems;
 
@@ -62,7 +63,7 @@ function onLoadEventHandler() {
 }
 
 function newTodoEventHandler(event) {
-  let text = event.target.value;
+  let text = trim(event.target.value);
   addTodo({
     id: Date.now(),
     text: text,

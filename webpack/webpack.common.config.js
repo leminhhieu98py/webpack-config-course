@@ -13,6 +13,9 @@ const config = {
     filename: '[name].[contenthash].js' // naming the JS file in build folder
     // clean: true, // this clean have a bug from webpack for dev server
   },
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
   module: {
     // each rule to import file types
     rules: [
@@ -37,6 +40,13 @@ const config = {
       {
         test: /\.html$/,
         use: 'html-loader'
+      },
+      {
+        test: /\.(js|ts)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
       }
     ]
   },
